@@ -26,6 +26,7 @@ class LinearRegression:
         return y_hat
     
     def fit(self, X, y, learning_rate=0.01, num_iter=1000):
+        self.errors = []
         m = X.shape[0]
         n = X.shape[1]
         self.params = np.random.rand(n+1,1)
